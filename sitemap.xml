@@ -2,51 +2,44 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   
   <url>
-    <loc>http://yoursite.com/tags/index.html</loc>
+    <loc>https://eli-qu.github.io/2020/07/12/%E6%88%91%E6%98%AF%E5%A6%82%E4%BD%95%E6%90%AD%E5%BB%BA%E8%BF%99%E4%B8%AAblog%E7%9A%84/</loc>
+    
+    <lastmod>2020-07-12T10:12:28.614Z</lastmod>
+    
+  </url>
+  
+  <url>
+    <loc>https://eli-qu.github.io/tags/index.html</loc>
     
     <lastmod>2020-07-12T03:25:57.302Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/2020/07/11/about/</loc>
-    
-    <lastmod>2020-07-11T13:58:01.011Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/about/index.html</loc>
+    <loc>https://eli-qu.github.io/about/index.html</loc>
     
     <lastmod>2020-07-11T13:45:39.031Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/message/index.html</loc>
+    <loc>https://eli-qu.github.io/message/index.html</loc>
     
     <lastmod>2020-07-11T13:11:05.185Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/link/index.html</loc>
+    <loc>https://eli-qu.github.io/link/index.html</loc>
     
     <lastmod>2020-07-11T11:36:27.155Z</lastmod>
     
   </url>
   
   <url>
-    <loc>http://yoursite.com/categories/index.html</loc>
+    <loc>https://eli-qu.github.io/categories/index.html</loc>
     
     <lastmod>2020-07-11T11:35:41.267Z</lastmod>
-    
-  </url>
-  
-  <url>
-    <loc>http://yoursite.com/2020/07/11/hello-world/</loc>
-    
-    <lastmod>2020-07-11T07:57:22.520Z</lastmod>
     
   </url>
   
