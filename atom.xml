@@ -6,7 +6,7 @@
   <link href="/atom.xml" rel="self"/>
   
   <link href="https://eli-qu.github.io/"/>
-  <updated>2020-07-12T10:12:28.614Z</updated>
+  <updated>2020-07-15T13:05:55.064Z</updated>
   <id>https://eli-qu.github.io/</id>
   
   <author>
@@ -15,6 +15,29 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>记录关于我如何把评论系统搬上来的！</title>
+    <link href="https://eli-qu.github.io/2020/07/15/%E8%AE%B0%E5%BD%95%E5%85%B3%E4%BA%8E%E6%88%91%E5%A6%82%E4%BD%95%E6%8A%8A%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E6%90%AC%E4%B8%8A%E6%9D%A5%E7%9A%84%EF%BC%81/"/>
+    <id>https://eli-qu.github.io/2020/07/15/%E8%AE%B0%E5%BD%95%E5%85%B3%E4%BA%8E%E6%88%91%E5%A6%82%E4%BD%95%E6%8A%8A%E8%AF%84%E8%AE%BA%E7%B3%BB%E7%BB%9F%E6%90%AC%E4%B8%8A%E6%9D%A5%E7%9A%84%EF%BC%81/</id>
+    <published>2020-07-15T13:03:41.000Z</published>
+    <updated>2020-07-15T13:05:55.064Z</updated>
+    
+    <content type="html"><![CDATA[<link rel="stylesheet" class="aplayer-secondary-style-marker" href="\assets\css\APlayer.min.css"><script src="\assets\js\APlayer.min.js" class="aplayer-secondary-script-marker"></script><h1 id="设置评论系统"><a href="#设置评论系统" class="headerlink" title="设置评论系统"></a>设置评论系统</h1><h2 id="教程"><a href="#教程" class="headerlink" title="教程"></a>教程</h2><p>这个教程有很多，百度上找找有很多。</p><p>这里推荐一个找到的大佬的教程：<a href="https://blog.lete114.top/article/Valine-LeanCloud-Config.html#Valine-%E9%85%8D%E7%BD%AE" target="_blank" rel="noopener">LeanCloud-Valine 保姆级教程</a></p><p>教程很详细！跟着做基本没什么问题</p><h2 id="注意"><a href="#注意" class="headerlink" title="注意"></a>注意</h2><h3 id="定时任务"><a href="#定时任务" class="headerlink" title="定时任务"></a>定时任务</h3><p>设置的时候有一个Cron表达式，在百度里查了一下有一个转换器。<del>（虽然还是看不明白）</del></p><p>不过好在有找到一些常用的表达式：</p><p><a href="https://www.bejson.com/othertools/cron/" target="_blank" rel="noopener">Cron常用表达式链接</a></p><blockquote><p>常用表达式例子</p><p>  （1）0/2 * * * * ?  表示每2秒 执行任务</p><p>  （1）0 0/2 * * * ?  表示每2分钟 执行任务</p><p>  （1）0 0 2 1 * ?  表示在每月的1日的凌晨2点调整任务</p><p>  （2）0 15 10 ? * MON-FRI  表示周一到周五每天上午10:15执行作业</p><p>  （3）0 15 10 ? 6L 2002-2006  表示2002-2006年的每个月的最后一个星期五上午10:15执行作</p><p>  （4）0 0 10,14,16 * * ?  每天上午10点，下午2点，4点 </p><p>  （5）0 0/30 9-17 * * ?  朝九晚五工作时间内每半小时 </p><p>  （6）0 0 12 ? * WED   表示每个星期三中午12点 </p><p>  （7）0 0 12 * * ?  每天中午12点触发 </p><p>  （8）0 15 10 ? * *   每天上午10:15触发 </p><p>  （9）0 15 10 * * ?   每天上午10:15触发 </p><p>  （10）0 15 10 * * ?   每天上午10:15触发 </p><p>  （11）0 15 10 * * ? 2005   2005年的每天上午10:15触发 </p><p>  （12）0 * 14 * * ?   在每天下午2点到下午2:59期间的每1分钟触发 </p><p>  （13）0 0/5 14 * * ?   在每天下午2点到下午2:55期间的每5分钟触发 </p><p>  （14）0 0/5 14,18 * * ?   在每天下午2点到2:55期间和下午6点到6:55期间的每5分钟触发 </p><p>  （15）0 0-5 14 * * ?   在每天下午2点到下午2:05期间的每1分钟触发 </p><p>  （16）0 10,44 14 ? 3 WED   每年三月的星期三的下午2:10和2:44触发 </p><p>  （17）0 15 10 ? * MON-FRI   周一至周五的上午10:15触发 </p><p>  （18）0 15 10 15 * ?   每月15日上午10:15触发 </p><p>  （19）0 15 10 L * ?   每月最后一日的上午10:15触发 </p><p>  （20）0 15 10 ? * 6L   每月的最后一个星期五上午10:15触发 </p><p>  （21）0 15 10 ? * 6L 2002-2005  2002年至2005年的每月的最后一个星期五上午10:15触发 </p><p>  （22）0 15 10 ? * 6#3  每月的第三个星期五上午10:15触发</p></blockquote><h3 id="启用Valine"><a href="#启用Valine" class="headerlink" title="启用Valine"></a>启用Valine</h3><p>我在这一点上栽了个大跟头</p><p>之前步骤都对的，但是启用之后就是显示不出评论框。没有输入的地方。</p><p>然后看了一下是需要在 <code>#commemt</code>里面的<code>use:</code> 里添加Valine才行，而且还不是随便写写<br>我一开始写的是</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">comments:</span><br><span class="line">  <span class="comment"># Up to two comments system, the first will be shown as default</span></span><br><span class="line">  <span class="comment"># Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments</span></span><br><span class="line">  use: Valine/Gitalk</span><br></pre></td></tr></table></figure><p>不行！<br>然后我看了下后面都是用逗号分隔的，又试了一下</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">comments:</span><br><span class="line">  <span class="comment"># Up to two comments system, the first will be shown as default</span></span><br><span class="line">  <span class="comment"># Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments</span></span><br><span class="line">  use:Valine,Gitalk</span><br></pre></td></tr></table></figure><p>还是不行！<br>纠结了两天<br>然后看了眼群里大佬讨论的时候说是用的  “ - ”  来分隔，我就·····emmm，好，我就是菜<br>所以应该是这样的</p><figure class="highlight bash"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">comments:</span><br><span class="line">  <span class="comment"># Up to two comments system, the first will be shown as default</span></span><br><span class="line">  <span class="comment"># Disqus/Disqusjs/Livere/Gitalk/Valine/Utterances/Facebook Comments</span></span><br><span class="line">  use:</span><br><span class="line">  - Valine</span><br><span class="line">  - Gitalk</span><br></pre></td></tr></table></figure><h3 id="Valine-配置"><a href="#Valine-配置" class="headerlink" title="Valine 配置"></a>Valine 配置</h3><p>在大佬的博客里有一部分是<code>Valine配置</code>，内容是需要把一下代码复制到<code>C:\Hexo-Blog\themes\Butterfly\layout\includes\comments\valine.pug</code> </p><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br></pre></td><td class="code"><pre><span class="line">window.valine &#x3D; new Valine(&#123;</span><br><span class="line">  el:&#39;#vcomment&#39;,</span><br><span class="line">  master:&#39;#&#123;theme.valine.master&#125;&#39;,</span><br><span class="line">  friends:&#39;#&#123;theme.valine.friends&#125;&#39;,</span><br><span class="line">  appId: &#39;#&#123;theme.valine.appId&#125;&#39;,</span><br><span class="line">  appKey: &#39;#&#123;theme.valine.appKey&#125;&#39;,</span><br><span class="line">  #省略....</span><br></pre></td></tr></table></figure><p>不过其实本来里面就已经有了，反正我的文件里面已经有这一部分了。所以我觉得可以省去。</p><h1 id="设置评论管理后台"><a href="#设置评论管理后台" class="headerlink" title="设置评论管理后台"></a>设置评论管理后台</h1><p>这里可以也可以看大佬的博客：<a href="https://www.antmoe.com/posts/2380732b/index.html" target="_blank" rel="noopener">Valine-admin配置攻略</a></p><p>管理的自动唤醒现在由问题，大佬博客里还有一个链接专门解决了这个问题：<a href="https://www.antmoe.com/posts/ff6aef7b/index.html" target="_blank" rel="noopener">优雅解决控流问题</a></p><p>就这些！</p>]]></content>
+    
+    <summary type="html">
+    
+      hexo+github 搭建博客
+    
+    </summary>
+    
+    
+      <category term="hexo" scheme="https://eli-qu.github.io/categories/hexo/"/>
+    
+    
+      <category term="HEXO" scheme="https://eli-qu.github.io/tags/HEXO/"/>
+    
+  </entry>
   
   <entry>
     <title>我是如何搭建这个blog的</title>
